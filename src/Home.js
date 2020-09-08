@@ -13,7 +13,12 @@ function Home() {
                     alt="amazon banner"
                     />
                 <div className="home__row">
-                    <Product />
+                    <Product 
+                        title="Pizza"   
+                        price={12.99}
+                        image="https://www.seriouseats.com/2017/02/20170216-detroit-style-pizza-47-1500x1125-1.jpg" 
+                        rating={5}
+                    />
                     <Product />
                 </div>
 
