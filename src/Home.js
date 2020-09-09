@@ -21,7 +21,7 @@ function Home() {
                         rating={5}
                     />
                     <Product 
-                        id="345245234"
+                        id="34fdsfsd34"
                         title="Pizza"   
                         price={12.99}
                         image="https://www.seriouseats.com/2017/02/20170216-detroit-style-pizza-47-1500x1125-1.jpg" 
@@ -31,21 +31,21 @@ function Home() {
 
                 <div className="home__row">
                     <Product
-                        id="345245234"
+                        id="3434543534"
                         title="Pizza"
                         price={12.99}
                         image="https://www.seriouseats.com/2017/02/20170216-detroit-style-pizza-47-1500x1125-1.jpg"
                         rating={5}
                     />                    
                     <Product
-                        id="345245234"
+                        id="312334"
                         title="Pizza"
                         price={12.99}
                         image="https://www.seriouseats.com/2017/02/20170216-detroit-style-pizza-47-1500x1125-1.jpg"
                         rating={5}
                     />                    
                     <Product
-                        id="345245234"
+                        id="345245343534234"
                         title="Pizza"
                         price={12.99}
                         image="https://www.seriouseats.com/2017/02/20170216-detroit-style-pizza-47-1500x1125-1.jpg"
@@ -54,7 +54,7 @@ function Home() {
                 </div>
                 <div className="home__row">
                     <Product
-                        id="345245234"
+                        id="3452454517234"
                         title="Pizza"
                         price={12.99}
                         image="https://www.seriouseats.com/2017/02/20170216-detroit-style-pizza-47-1500x1125-1.jpg"
