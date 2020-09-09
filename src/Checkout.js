@@ -6,7 +6,7 @@ import Subtotal from './Subtotal.js';
 import CheckoutProduct from './CheckoutProduct.js';
 
 function Checkout() {
-    const [{ basket }, dispatch] = useStateValue();
+    const [{ basket, user }, dispatch] = useStateValue();
 
 
     return (
@@ -17,6 +17,7 @@ function Checkout() {
                     src="https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492688_.jpg" 
                     alt="" 
                 />
+                <h3>{user? `Hello ${user.email}`: 'Hello Guest'}</h3>
                 <h2 className="checkout__title" >Shopping Cart</h2>
 
                 {basket.map(item => (
