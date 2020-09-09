@@ -14,21 +14,52 @@ function Home() {
                     />
                 <div className="home__row">
                     <Product 
+                        id="345245234"
                         title="Pizza"   
                         price={12.99}
                         image="https://www.seriouseats.com/2017/02/20170216-detroit-style-pizza-47-1500x1125-1.jpg" 
                         rating={5}
                     />
-                    <Product />
+                    <Product 
+                        id="345245234"
+                        title="Pizza"   
+                        price={12.99}
+                        image="https://www.seriouseats.com/2017/02/20170216-detroit-style-pizza-47-1500x1125-1.jpg" 
+                        rating={5}
+                    />
                 </div>
 
                 <div className="home__row">
-                    <Product />
-                    <Product />
-                    <Product />
+                    <Product
+                        id="345245234"
+                        title="Pizza"
+                        price={12.99}
+                        image="https://www.seriouseats.com/2017/02/20170216-detroit-style-pizza-47-1500x1125-1.jpg"
+                        rating={5}
+                    />                    
+                    <Product
+                        id="345245234"
+                        title="Pizza"
+                        price={12.99}
+                        image="https://www.seriouseats.com/2017/02/20170216-detroit-style-pizza-47-1500x1125-1.jpg"
+                        rating={5}
+                    />                    
+                    <Product
+                        id="345245234"
+                        title="Pizza"
+                        price={12.99}
+                        image="https://www.seriouseats.com/2017/02/20170216-detroit-style-pizza-47-1500x1125-1.jpg"
+                        rating={5}
+                    />
                 </div>
                 <div className="home__row">
-                    <Product />
+                    <Product
+                        id="345245234"
+                        title="Pizza"
+                        price={12.99}
+                        image="https://www.seriouseats.com/2017/02/20170216-detroit-style-pizza-47-1500x1125-1.jpg"
+                        rating={5}
+                    />
                 </div>
             </div>
         </div>
