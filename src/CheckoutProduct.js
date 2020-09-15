@@ -2,6 +2,7 @@ import React from 'react'
 import './checkoutproduct.css'
 import { useStateValue } from './StateProvider';
 
+
 function CheckoutProduct({ id, image, title, price, rating }) {
     const [{ basket }, dispatch] = useStateValue();
 
