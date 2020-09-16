@@ -1,21 +1,24 @@
 import { Link } from '@material-ui/core';
-import React from 'react'
+import React, { useState } from 'react'
 import CheckoutProduct from './CheckoutProduct';
 import './payment.css'
 import { useStateValue } from './StateProvider'
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
+import CurrencyFormat from 'react-currency-format';
+import { getBasketTotal } from './reducer';
 
 function Payment() {
     const [{basket, user}, dispatch] = useStateValue();
-    const [error, setError] = useStateValue(null);
-    // const [processing, setProcessing] = useStateValue("");
-    const [disables, setDisabled] = useStateValue(true);
+    const [error, setError] = useState(null);
+    const [processing, setProcessing] = useState("");
+    const [disabled, setDisabled] = useState(true);
+    const [succeeded, setSucceeded] = useState(false);
     
     const stripe = useStripe();
     const elements = useElements();
 
     const handleSubmit = (e) => {
-        
+
     }
 
     const handleChange = (e) => {
@@ -62,6 +65,22 @@ function Payment() {
                     <div className="payment__details">
                         <form onSubmit={handleSubmit}>
                             <CardElement onChange={handleChange}/>
+                            <div className="payment__priceContainer">
+                                <CurrencyFormat
+                                    renderText={(value) => (
+                                        <h3>Order Total: {value}</h3>
+                                    )}
+                                    decimalScale={2}
+                                    value={getBasketTotal(basket)}
+                                    displayType={"text"}
+                                    thousandSeparator={true}
+                                    prefix={"$"}
+                                />
+                                <button disabled={processing || disabled || succeeded}>
+                                    <span>{ processing ? <p>Processing</p> : "Buy Now" }</span>
+                                </button>
+                            </div>
+                                {error && <div>{error}</div>}
                         </form>
                     </div>
                 </div>
