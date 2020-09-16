@@ -3,9 +3,25 @@ import React from 'react'
 import CheckoutProduct from './CheckoutProduct';
 import './payment.css'
 import { useStateValue } from './StateProvider'
+import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 
 function Payment() {
     const [{basket, user}, dispatch] = useStateValue();
+    const [error, setError] = useStateValue(null);
+    // const [processing, setProcessing] = useStateValue("");
+    const [disables, setDisabled] = useStateValue(true);
+    
+    const stripe = useStripe();
+    const elements = useElements();
+
+    const handleSubmit = (e) => {
+        
+    }
+
+    const handleChange = (e) => {
+        setDisabled(e.empty);
+        setError(e.error ? e.error.message : "");
+    }
 
     return (
         <div className="payment">
@@ -44,7 +60,9 @@ function Payment() {
                         <h3>Payment Method</h3>
                     </div>
                     <div className="payment__details">
-                        
+                        <form onSubmit={handleSubmit}>
+                            <CardElement onChange={handleChange}/>
+                        </form>
                     </div>
                 </div>
             </div>
