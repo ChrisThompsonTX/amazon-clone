@@ -12,6 +12,7 @@ import Home from './Home';
 import Checkout from './Checkout';
 import Login from './Login';
 import Payment from './Payment';
+import Orders from './Orders';
 
 const promise = loadStripe('pk_test_51HS47TIwmwJq5l3a0fNd5uJj1BlYgQM3NZD6vufrGJwzSomvP1GTaEBKTrDKsJP6QJGaOFjnQp4dazAN3iDROYKr00sjcd9UIG');
 
@@ -40,6 +41,10 @@ function App() {
         <Switch>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/orders">
+            <Header />
+            <Orders />
           </Route>
           <Route path="/checkout">
             <Header />
