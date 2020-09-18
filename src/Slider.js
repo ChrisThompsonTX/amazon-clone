@@ -15,6 +15,17 @@ function Slider() {
     const secondSlide = slides[1];
     const lastSlide = slides[slides.length - 1];
 
+    const [state, setState] = useState({
+        activeSlide: 0,
+        translate: getWidth(),
+        transition: 0.45,
+        _slides: [lastSlide, firstSlide, secondSlide]
+    });
+
+    const autoPlayRef = useRef();
+    const transitionRef = useRef();
+    const resizeRef = useRef();
+
 
     return (
         <div className="slider">
